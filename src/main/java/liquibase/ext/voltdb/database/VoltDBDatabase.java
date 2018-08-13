@@ -30,6 +30,16 @@ public class VoltDBDatabase extends AbstractJdbcDatabase {
         return null;
     }
 
+    @Override
+    public void setOutputDefaultSchema(boolean outputDefaultSchema) {
+        super.setOutputDefaultSchema(false);
+    }
+
+    @Override
+    public void setOutputDefaultCatalog(boolean outputDefaultCatalog) {
+        super.setOutputDefaultCatalog(false);
+    }
+
     public String getShortName() {
         return PRODUCT_NAME.toLowerCase();
     }
